@@ -1,0 +1,3 @@
+Collects all scripts that help generate GObject files (noone should have to do that by hand!).
+
+Tries hard to stick to Glib/GObject/GTK-Conventions.
