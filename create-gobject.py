@@ -122,6 +122,7 @@ if '__main__' == __name__:
 
 		'header_filename': header_filename,
 		'base_include': base_include,
+		'program_name': program_name,
 	}
 
 	file(header_filename, 'w').write(header_tpl.render(**data))
