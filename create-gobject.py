@@ -15,11 +15,11 @@ header_tpl_s = """\
 #include <{{base_include}}>
 
 #define {{uppercase_prefix}}_TYPE_{{uppercase_typename}} ({{lowercase_prefix}}_{{lowercase_typename}}_get_type())
-#define {{uppercase_prefix}}_{{uppercase_typename}}(obj) (G_TYPE_CHECK_INSTANCE_CAST((obj), {{uppercase_prefix}}_TYPE_{{uppercase_typename}}, {{typename}}))
+#define {{uppercase_prefix}}_{{uppercase_typename}}(obj) (G_TYPE_CHECK_INSTANCE_CAST((obj), {{uppercase_prefix}}_TYPE_{{uppercase_typename}}, {{prefix}}{{typename}}))
 #define {{uppercase_prefix}}_IS_{{uppercase_typename}}(obj) (G_TYPE_CHECK_INSTANCE_TYPE((obj), {{uppercase_prefix}}_TYPE_{{uppercase_typename}}))
-#define {{uppercase_prefix}}_{{uppercase_typename}}_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST((klass), {{uppercase_prefix}}_TYPE_{{uppercase_typename}}, {{typename}}Class))
+#define {{uppercase_prefix}}_{{uppercase_typename}}_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST((klass), {{uppercase_prefix}}_TYPE_{{uppercase_typename}}, {{prefix}}{{typename}}Class))
 #define {{uppercase_prefix}}_IS_{{uppercase_typename}}_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE((klass), {{uppercase_prefix}}_TYPE_{{uppercase_typename}}))
-#define {{uppercase_prefix}}_{{uppercase_typename}}_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS((obj), {{uppercase_prefix}}_TYPE_{{uppercase_typename}}, {{typename}}Class))
+#define {{uppercase_prefix}}_{{uppercase_typename}}_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS((obj), {{uppercase_prefix}}_TYPE_{{uppercase_typename}}, {{prefix}}{{typename}}Class))
 
 typedef struct _{{prefix}}{{typename}} {{prefix}}{{typename}};
 typedef struct _{{prefix}}{{typename}}Class {{prefix}}{{typename}}Class;
