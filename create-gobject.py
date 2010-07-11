@@ -58,7 +58,8 @@ static void {{lowercase_prefix}}_{{lowercase_typename}}_init({{prefix}}{{typenam
 }
 
 {{prefix}}{{typename}} *{{lowercase_prefix}}_{{lowercase_typename}}_new() {
-	return g_object_new({{uppercase_prefix}}_TYPE_{{uppercase_typename}}, NULL);
+	{{prefix}}{{typename}} *obj = g_object_new({{uppercase_prefix}}_TYPE_{{uppercase_typename}}, NULL);
+	return obj;
 }
 """
 
